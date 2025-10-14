@@ -15,9 +15,10 @@ spec:
     spec:
       containers:
         - name: myapp-container
-          image: your-dockerhub-username/myapp:latest
+          image: vshalini01/week8sample:version1
           ports:
             - containerPort: 5000
           env:
             - name: ENVIRONMENT
+
               value: "production"

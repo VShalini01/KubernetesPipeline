@@ -1,24 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
-  namespace: myapp-namespace
+  name: kubedemoapp-deployment
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
-      app: myapp
+      app: kubedemoapp
   template:
     metadata:
       labels:
-        app: myapp
+        app: kubedemoapp
     spec:
       containers:
-        - name: myapp-container
-          image: vshalini01/week8sample:version1
+        - name: kubedemoapp
+          image: vshalini01/sample:kubeimage1
           ports:
             - containerPort: 5000
-          env:
-            - name: ENVIRONMENT
 
-              value: "production"
